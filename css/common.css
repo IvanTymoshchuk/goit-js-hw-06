@@ -23,6 +23,28 @@ button {
   cursor: pointer;
 }
 
+ul{
+  list-style: none;
+}
+
+a {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  border: solid black;
+  background-color: white;
+  color: black;
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+a:hover {
+  border: solid white;
+  background-color: rgb(33, 16, 216);
+  color: white;
+}
+
 .gallery {
   display: flex;
   align-items: center;
