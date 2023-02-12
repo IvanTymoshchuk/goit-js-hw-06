@@ -16,6 +16,7 @@
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+// 1. Вирішення 
 
 const controls = document.querySelector('controls');
 const inputNumberEl = document.querySelector('[type="number"]');
@@ -28,7 +29,6 @@ divBoxesEl.style.alignItems = 'center';
 divBoxesEl.style.marginTop = '30px';
 
 createBtnEl.addEventListener('click', () => {
-  //console.log(inputNumberEl.value);
   if (
     Number(inputNumberEl.value.trim()) > Number(inputNumberEl.max) ||
     Number(inputNumberEl.value.trim()) < Number(inputNumberEl.min)
@@ -48,14 +48,16 @@ function destroyBoxes() {
 }
 
 function createBoxes(amount) {
-  let size = 30;
+  let size = 20;
   const boxesArr = [];
   for (let i = 0; i < amount; i += 1) {
-    size += 10 * i;
+    size += 10 ;
     const div = `<div class="item" style="display: block; margin-right: 30px; margin-bottom: 30px; background-color: ${getRandomHexColor()}; width: ${size}px; height: ${size}px;"></div>`;
     boxesArr.push(div);
   }
   divBoxesEl.insertAdjacentHTML('beforeend', boxesArr.join(''));
 }
+
+
 
 // Цю задачку я вирішив не сам ! Варто розібратися !
